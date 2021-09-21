@@ -1,0 +1,9 @@
+quarkus:
+  log:
+    console:
+      enable: true
+      format: "%d{HH:mm:ss} %-3p [%c{1.}] %s%e%n"
+      level: INFO
+      color: true
+  banner:
+    enabled: false

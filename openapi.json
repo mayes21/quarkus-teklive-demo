@@ -1,0 +1,54 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "title" : "Person api",
+    "description" : "This API allows to generate random person",
+    "contact" : {
+      "name" : "@amayas",
+      "url" : "https://twitter.com/amabb21"
+    },
+    "version" : "1.0"
+  },
+  "externalDocs" : {
+    "description" : "Person documentation API",
+    "url" : "https://github.com/mayes21"
+  },
+  "paths" : {
+    "/api/person" : {
+      "get" : {
+        "summary" : "Generates person",
+        "description" : "Generates random person",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Person"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Person" : {
+        "type" : "object",
+        "properties" : {
+          "address" : {
+            "type" : "string"
+          },
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
